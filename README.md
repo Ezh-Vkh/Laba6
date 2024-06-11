@@ -9,7 +9,7 @@ CPack - это инструмент упаковки скомпилирован�
 1. Клонируем репозиторий с 4 лабораторной
 
 `````sh
-git clone https://github.com/${GITHUB_USERNAME}/lab04dzd laba6
+git clone https://github.com/${GITHUB_USERNAME}/laba4 laba6
 cd laba6
 git remote remove origin
 git remote add origin https://github.com/${GITHUB_USERNAME}/laba6
