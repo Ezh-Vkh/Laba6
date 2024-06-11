@@ -7,8 +7,8 @@ CPack - это инструмент упаковки скомпилирован�
 Для этого нужно добавить ветвление в конфигурационные файлы для CI со следующей логикой: если commit помечен тэгом, то необходимо собрать пакеты (DEB, RPM, WIX, DragNDrop, ...) и разместить их на сервисе GitHub. (см. пример для Travi CI)
 
 Клонируем репозиторий с 4 лабораторной
-git clone https://github.com/${GITHUB_USERNAME}/lab04dzd lab06
-cd lab06
+git clone https://github.com/${GITHUB_USERNAME}/laba4 laba6
+cd laba6
 git remote remove origin
 git remote add origin https://github.com/${GITHUB_USERNAME}/lab06dzd
 Cloning into 'lab06'...
@@ -18,7 +18,7 @@ remote: Compressing objects: 100% (153/153), done.
 remote: Total 327 (delta 145), reused 286 (delta 128), pack-reused 0
 Receiving objects: 100% (327/327), 1.12 MiB | 5.27 MiB/s, done.
 Resolving deltas: 100% (145/145), done.
-Cmake в lab06
+Cmake в laba6
 	cat > CMakeLists.txt <<EOF
 	cmake_minimum_required(VERSION 3.4)
 	project(lab06)
