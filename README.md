@@ -6,22 +6,31 @@ CPack - это инструмент упаковки скомпилирован�
 
 Для этого нужно добавить ветвление в конфигурационные файлы для CI со следующей логикой: если commit помечен тэгом, то необходимо собрать пакеты (DEB, RPM, WIX, DragNDrop, ...) и разместить их на сервисе GitHub. (см. пример для Travi CI)
 
-Клонируем репозиторий с 4 лабораторной
-git clone https://github.com/${GITHUB_USERNAME}/laba4 laba6
+1. Клонируем репозиторий с 4 лабораторной
+
+`````sh
+git clone https://github.com/${GITHUB_USERNAME}/lab04dzd laba6
 cd laba6
 git remote remove origin
-git remote add origin https://github.com/${GITHUB_USERNAME}/lab06dzd
-Cloning into 'lab06'...
+git remote add origin https://github.com/${GITHUB_USERNAME}/laba6
+`````
+
+`````sh
+Cloning into 'laba6'...
 remote: Enumerating objects: 327, done.
 remote: Counting objects: 100% (327/327), done.
 remote: Compressing objects: 100% (153/153), done.
 remote: Total 327 (delta 145), reused 286 (delta 128), pack-reused 0
 Receiving objects: 100% (327/327), 1.12 MiB | 5.27 MiB/s, done.
 Resolving deltas: 100% (145/145), done.
-Cmake в laba6
+`````
+
+2. Cmake в laba6
+
+`````sh
 	cat > CMakeLists.txt <<EOF
 	cmake_minimum_required(VERSION 3.4)
-	project(lab06)
+	project(laba6)
 	set(CMAKE_CXX_STANDARD 11)
 	set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
@@ -29,7 +38,11 @@ Cmake в laba6
 
 	include(CPack.cmake)
 	EOF
-Cpack
+`````
+
+3. Cpack
+
+`````sh
 	cat > CPack.cmake <<EOF
 	include(InstallRequiredSystemLibraries)
 	
@@ -64,6 +77,9 @@ Cpack
 	EOF
 	
 	git push origin master
+`````
+
+`````sh
 Username for 'https://github.com': Ezh-Vkh
 Password for 'https://Ezh-Vkh@github.com':
 Enumerating objects: 327, done.
@@ -73,11 +89,15 @@ Compressing objects: 100% (136/136), done.
 Writing objects: 100% (327/327), 1.12 MiB | 1.55 MiB/s, done.
 Total 327 (delta 145), reused 327 (delta 145), pack-reused 0
 remote: Resolving deltas: 100% (145/145), done.
-To https://github.com/Ezh-Vkh/lab06dzd
+To https://github.com/Ezh-Vkh/laba6
  * [new branch]      master -> master
-Workflow
+`````
+
+4. Workflow
+
 Файл - для выполнения build.
 
+`````sh
 name: CMake
 
 on:
@@ -99,8 +119,11 @@ jobs:
 
   - name: Build Solver
     run: cmake --build ${{github.workspace}}/build
+`````
+
 Файл - build and release
 
+`````sh
 name: CMake Build and Release
 
 on:
@@ -140,9 +163,15 @@ jobs:
             zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+`````
+
+`````sh
 	git tag -a v1.1.2 -m "v1.1.2"
 	git add README.md
 	git push origin v1.1.2
+`````
+
+`````sh
 	Username for 'https://github.com': Ezh-Vkh
 	Password for 'https://Ezh-Vkh@github.com':
 	Enumerating objects: 328, done.
@@ -152,27 +181,40 @@ jobs:
 	Writing objects: 100% (328/328), 1.12 MiB | 2.12 MiB/s, done.
 	Total 328 (delta 145), reused 327 (delta 145), pack-reused 0
 	remote: Resolving deltas: 100% (145/145), done.
-	To https://github.com/Ezh-Vkh/laba6dzd
+	To https://github.com/Ezh-Vkh/laba6
 	 * [new tag]         v1.1.2 -> v1.1.2
+`````
+
+`````sh
 	git add preview.png
 	git tag -a v1.1.4 -m "v1.1.2"
 	git push origin v1.1.4
+`````
+
+`````sh
 	Username for 'https://github.com': Ezh-Vkh
 	Password for 'https://Ezh-Vkh@github.com':
 	Enumerating objects: 1, done.
 	Counting objects: 100% (1/1), done.
 	Writing objects: 100% (1/1), 157 bytes | 157.00 KiB/s, done.
 	Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
-	To https://github.com/Ezh-Vkh/laba6dzd
+	To https://github.com/Ezh-Vkh/laba6
 	 * [new tag]         v1.1.4 -> v1.1.4
+`````
+
+`````sh
 	git add README.md
 	git tag -a v1.1.6 -m "New README"
 	git push origin v1.1.6
+`````
+
+`````sh
 	Username for 'https://github.com': Ezh-Vkh
 	Password for 'https://Ezh-Vkh@github.com':
 	Enumerating objects: 1, done.
 	Counting objects: 100% (1/1), done.
 	Writing objects: 100% (1/1), 168 bytes | 84.00 KiB/s, done.
 	Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
-	To https://github.com/Ezh-Vkh/laba6dzd
+	To https://github.com/nixopn/laba6
 	 * [new tag]         v1.1.6 -> v1.1.6
+`````
