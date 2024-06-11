@@ -64,8 +64,8 @@ Cpack
 	EOF
 	
 	git push origin master
-Username for 'https://github.com': nixopn
-Password for 'https://nixopn@github.com':
+Username for 'https://github.com': Ezh-Vkh
+Password for 'https://Ezh-Vkh@github.com':
 Enumerating objects: 327, done.
 Counting objects: 100% (327/327), done.
 Delta compression using up to 8 threads
@@ -73,7 +73,7 @@ Compressing objects: 100% (136/136), done.
 Writing objects: 100% (327/327), 1.12 MiB | 1.55 MiB/s, done.
 Total 327 (delta 145), reused 327 (delta 145), pack-reused 0
 remote: Resolving deltas: 100% (145/145), done.
-To https://github.com/nixopn/lab06dzd
+To https://github.com/Ezh-Vkh/lab06dzd
  * [new branch]      master -> master
 Workflow
 Файл - для выполнения build.
@@ -143,8 +143,8 @@ jobs:
 	git tag -a v1.1.2 -m "v1.1.2"
 	git add README.md
 	git push origin v1.1.2
-	Username for 'https://github.com': nixopn
-	Password for 'https://nixopn@github.com':
+	Username for 'https://github.com': Ezh-Vkh
+	Password for 'https://Ezh-Vkh@github.com':
 	Enumerating objects: 328, done.
 	Counting objects: 100% (328/328), done.
 	Delta compression using up to 8 threads
@@ -152,27 +152,27 @@ jobs:
 	Writing objects: 100% (328/328), 1.12 MiB | 2.12 MiB/s, done.
 	Total 328 (delta 145), reused 327 (delta 145), pack-reused 0
 	remote: Resolving deltas: 100% (145/145), done.
-	To https://github.com/nixopn/lab06dzd
+	To https://github.com/Ezh-Vkh/laba6dzd
 	 * [new tag]         v1.1.2 -> v1.1.2
 	git add preview.png
 	git tag -a v1.1.4 -m "v1.1.2"
 	git push origin v1.1.4
-	Username for 'https://github.com': nixopn
-	Password for 'https://nixopn@github.com':
+	Username for 'https://github.com': Ezh-Vkh
+	Password for 'https://Ezh-Vkh@github.com':
 	Enumerating objects: 1, done.
 	Counting objects: 100% (1/1), done.
 	Writing objects: 100% (1/1), 157 bytes | 157.00 KiB/s, done.
 	Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
-	To https://github.com/nixopn/lab06dzd
+	To https://github.com/Ezh-Vkh/laba6dzd
 	 * [new tag]         v1.1.4 -> v1.1.4
 	git add README.md
 	git tag -a v1.1.6 -m "New README"
 	git push origin v1.1.6
-	Username for 'https://github.com': nixopn
-	Password for 'https://nixopn@github.com':
+	Username for 'https://github.com': Ezh-Vkh
+	Password for 'https://Ezh-Vkh@github.com':
 	Enumerating objects: 1, done.
 	Counting objects: 100% (1/1), done.
 	Writing objects: 100% (1/1), 168 bytes | 84.00 KiB/s, done.
 	Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
-	To https://github.com/nixopn/lab06dzd
+	To https://github.com/Ezh-Vkh/laba6dzd
 	 * [new tag]         v1.1.6 -> v1.1.6
